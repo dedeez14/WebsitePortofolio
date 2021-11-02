@@ -1,4 +1,9 @@
 from django.shortcuts import render
 
 def index(request):
-    return render(request,'index.html')
+    context = {
+        'judul':'Portofolio',
+        'Contrib':'Dede Febriansyah',
+        'Author':'Dede',
+    }
+    return render(request,'index.html', context)
