@@ -5,5 +5,9 @@ def index(request):
         'judul':'Portofolio',
         'Contrib':'Dede Febriansyah',
         'Author':'Dede',
+        'nav': [
+            ['/','Home']
+            ['/blog','Blog']
+        ]
     }
     return render(request,'index.html', context)

@@ -10,15 +10,16 @@
 
 <body>
     <h1>
-        Selamat datang {{ Contrib}}
+        Selamat datang {{ Contrib }}
     </h1>
     <h2>Author : {{ Author}}</h2>
-    <ul>
-        <li>
-            <a href="/" title="selamat datang akaka">Home</a>
-            <a href="/blog/" title="selamat datang blog">Blog</a>
-        </li>
-    </ul>
+    {% for link,name in nav %}
+    <li> 
+        <a href="{{link}}" title="{{name}}">{{ name }}</a>
+    <li>
+    {% endfor %} 
+    
+    
 </body>
 
 </html>
