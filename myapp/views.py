@@ -6,8 +6,8 @@ def index(request):
         'Contrib':'Dede Febriansyah',
         'Author':'Dede',
         'nav': [
-            ['/','Home']
-            ['/blog','Blog']
+            ['/','Home'],
+            ['/blog','Blog'],
         ]
     }
     return render(request,'index.html', context)
