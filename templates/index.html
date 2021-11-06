@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,22 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ judul }}</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %} ">
 </head>
 
 <body>
-    <h1>
-        Selamat datang {{ Contrib }}
-    </h1>
-    <h2>Author : {{ Author}}</h2>
-    {% for post in Posts %}
-    <h3>{{ post.title}}</h3>
-    <p>{{ post.body}}</p>{% endfor%} {% for link,name in nav %}
-    <li>
-        <a href="{{link}}" title="{{name}}">{{ name }}</a>
+    <div class="container ">
+        <h1>
+            Selamat datang {{ Contrib }}
+        </h1>
+        <h2>Author : {{ Author}}</h2>
+
+        {% for post in Posts %}
+        <h3>{{ post.title}}</h3>
+        <p>{{ post.body}}</p>{% endfor%} {% for link,name in nav %}
         <li>
-            {% endfor %}
+            <a href="{{link}} " title="{{name}} ">{{ name }}</a>
+            <li>
+                {% endfor %}
+    </div>
 
 
+
+    <link rel="stylesheet" href="{% static 'bootstrap/js/bootstrap.js' %} ">
 </body>
 
 </html>
